@@ -27,9 +27,17 @@ def make_color_list():
             colors.append([get_random_color(),w,h])
     return colors
 
+def swap_pixels(values):
+    pass
+    
 def bubble_sort(bubArr):
+    #Get [[R,G,B], Width, Height]
     for item in range(len(bubArr)-1,0,-1):
-        for i in range(num):
+        #Get [R,G,B], Width, Height
+        for r,g,b in range(item):
+            print(str(r))
+            print(str(g))
+            print(str(b))
             if bubArr[i]>= bubArr[i+1]:
                 temp = bubArr[i]
                 bubArr[i] = bubArr[i+1]
