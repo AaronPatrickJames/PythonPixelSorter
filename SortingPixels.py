@@ -11,7 +11,7 @@ clock = pygame.time.Clock()
 
 def change_screen(colorshere):
     for i in colorshere:
-        game_display.set_at((i[1], i[2]), i[0])
+        game_display.set_at((i[1], i[2]), "FFFF00")
         pygame.display.update()
     return colorshere
 
