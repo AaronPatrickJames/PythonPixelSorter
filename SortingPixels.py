@@ -2,8 +2,8 @@ import random
 import pygame
 from multiprocessing import Pool
 
-WIDTH = 300
-HEIGHT = 300
+WIDTH = 500
+HEIGHT = 500
 
 game_display = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pixel Sort")
@@ -11,7 +11,7 @@ clock = pygame.time.Clock()
 
 def change_screen(colorshere):
     for i in colorshere:
-        game_display.set_at((i[1], i[2]), "FFFF00")
+        game_display.set_at((i[1], i[2]), get_random_color())
         pygame.display.update()
     return colorshere
 
@@ -47,7 +47,15 @@ def bubble_sort(bubArr):
     print("")
     return True
 
+def get_colors(sort_me):
+    for item in sort_me:
+        color = item[0]
+        
+        
+    #for x in range(0, WIDTH):
+        #for y in range(0, HEIGHT):
 
+    
 
 def main():
     while True:
@@ -58,9 +66,12 @@ def main():
         
         sort_me = change_screen(make_color_list())
         clock.tick(60)
+        #to view array - DO NOT RUN on window larger than 50X50
+        #print(sort_me)
         #This is where my sorts would go
         #IF I HAD THEM
-        am_i_done = bubble_sort(sort_me)
+        get_single_color = get_colors(sort_me)
+        #am_i_done = bubble_sort(sort_me)
         
 
         
